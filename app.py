@@ -43,10 +43,12 @@ body2 = st.beta_container()
 
 with header:
     st.markdown("<h1 style='text-align: center;'>Behavioural patterns discovery for lifestyle analysis from egocentric photo-streams</h1>", unsafe_allow_html=True)
-    st.markdown("* [Martín Menchón](mailto:mmenchon@exa.unicen.edu.ar)", unsafe_allow_html=True)
-    st.markdown("* [Estefanía Talavera](mailto:e.talavera.martinez@rug.nl)", unsafe_allow_html=True)
-    st.markdown("* [José M. Massa](mailto:jmassa@exa.unicen.edu.ar)", unsafe_allow_html=True)
-    st.markdown("* [Petia I. Radeva](mailto:petia.ivanova@ub.edu)", unsafe_allow_html=True)
+    st.write("---")
+    st.markdown("* [Martín Menchón](mailto:mmenchon@exa.unicen.edu.ar) INTIA, UNCPBA, CONICET, Argentina", unsafe_allow_html=True)
+    st.markdown("* [Estefanía Talavera](mailto:e.talavera.martinez@rug.nl) University of Groningen, Groningen, The Netherlands", unsafe_allow_html=True)
+    st.markdown("* [José M. Massa](mailto:jmassa@exa.unicen.edu.ar) INTIA, UNCPBA, Argentina", unsafe_allow_html=True)
+    st.markdown("* [Petia I. Radeva](mailto:petia.ivanova@ub.edu) University of Barcelona, Barcelona, Spain", unsafe_allow_html=True)
+    st.write("---")
 with body:
     users = ["user_01","user_02","user_03","user_04","user_05","user_06","user_07","user_08","user_09","user_10","user_11","user_12","user_13","user_14"]
     user = st.selectbox('Select an user',users)
