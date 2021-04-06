@@ -4,12 +4,12 @@ import json
 
 # import SessionState
 # session_state = SessionState.get(loaded=False,day=[],upload_key = None,values_to_keep=[], trasnparency=-1)
-# import pathlib
+import pathlib
 
-# STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-# DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
-# if not DOWNLOADS_PATH.is_dir():
-#     DOWNLOADS_PATH.mkdir()
+STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
+DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
+if not DOWNLOADS_PATH.is_dir():
+    DOWNLOADS_PATH.mkdir()
 
 
 # Paths
@@ -18,6 +18,7 @@ farinella_path = "graphics_results/Farinella/"
 our_algorithm_path = "graphics_results/our_algorithm/"
 patterns_path = "patterns/our_algorithm/"
 ngrams_path = "ngrams/"
+dbscan_path = "graphics_results/Dbscan/"
 
 st.set_page_config(
     page_title="Behavioural patterns discovery for lifestyle analysis from egocentric photo-streams",
@@ -55,10 +56,12 @@ with body:
     'You selected: ', user
 
     image = Image.open(original_path+user+'.jpg')
+    image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
+    st.markdown("Open full image from [here](downloads/"+user+".jpg)")
     st.write("---")
 
-    options = ["Our algorithm","Organizing egocentric videos of daily living activities"]
+    options = ["Our algorithm","Organizing egocentric videos of daily living activities","DBSCAN"]
     option = st.selectbox('Select an algorithm',options)
 
     if option == 'Our algorithm':
@@ -66,7 +69,9 @@ with body:
         threshold = st.selectbox('Select a threshold',thresholds)
         try:
             im = Image.open(our_algorithm_path+user+'/'+threshold+'.jpg')
+            im.save(str(DOWNLOADS_PATH)+"/"+user+"-threshold.jpg")
             st.image(im)
+            st.markdown("Open full image from [here](downloads/"+user+"-threshold.jpg)")
             st.write("---")
             st.write('## Patterns for '+user+" at "+threshold)
 
@@ -87,7 +92,6 @@ with body:
                 json_path = ngrams_path+user+"/"+threshold+".json"
                 with open(json_path) as json_file:
                     dic_of_ngrams = json.load(json_file)
-                # print(data)
                 patterns_days = dic_of_ngrams["Day as patterns"]
                 st.write('### Day as patterns:')
                 for p in patterns_days:
@@ -104,6 +108,13 @@ with body:
         except:
             st.write("There is no patterns for this threshold")
 
-    else:
+    elif option == 'Organizing egocentric videos of daily living activities':
         im = Image.open(farinella_path+user+'.jpg')
+        im.save(str(DOWNLOADS_PATH)+"/"+user+'_farinella.jpg')
         st.image(im)
+        st.markdown("Open full image from [here](downloads/"+user+"_farinella.jpg)")
+    elif option == 'DBSCAN':
+        im = Image.open(dbscan_path+user+'.jpg')
+        im.save(str(DOWNLOADS_PATH)+"/"+user+'_dbscan.jpg')
+        st.image(im)
+        st.markdown("Open full image from [here](downloads/"+user+"_dbscan.jpg)")
