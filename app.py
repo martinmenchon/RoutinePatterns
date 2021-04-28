@@ -19,6 +19,7 @@ our_algorithm_path = "graphics_results/our_algorithm/"
 patterns_path = "patterns/our_algorithm/"
 ngrams_path = "ngrams/"
 dbscan_path = "graphics_results/Dbscan/"
+wordclouds_path = "word_cloud/"
 
 st.set_page_config(
     page_title="Behavioural patterns discovery for lifestyle analysis from egocentric photo-streams",
@@ -104,6 +105,17 @@ with body:
                     st.write(n)
                 im = Image.open(ngrams_path+user+'/'+threshold+'.jpg')
                 st.image(im)
+
+            st.write('## Word Clouds for '+user+" at "+threshold)
+            if st.button('Show found Word Clouds'):
+                wordclouds_all_plots = wordclouds_path+user+"/"+threshold+"/all_plots.png"
+                wordclouds_image_all_plots = Image.open(wordclouds_all_plots)
+                st.image(wordclouds_image_all_plots)
+
+                st.write('### Word Cloud of all Clusters')
+                wordclouds_summary = wordclouds_path+user+"/"+threshold+"/summary.png"
+                wordclouds_image_summary = Image.open(wordclouds_summary)
+                st.image(wordclouds_image_summary)
         
         except:
             st.write("There is no patterns for this threshold")
