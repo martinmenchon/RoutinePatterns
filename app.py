@@ -70,9 +70,9 @@ with body:
         threshold = st.selectbox('Select a threshold',thresholds)
         try:
             im = Image.open(our_algorithm_path+user+'/'+threshold+'.jpg')
-            im.save(str(DOWNLOADS_PATH)+"/"+user+"-threshold.jpg")
+            im.save(str(DOWNLOADS_PATH)+"/"+user+"-our_algorithm"+threshold+".jpg")
             st.image(im)
-            st.markdown("Open full image from [here](downloads/"+user+"-threshold.jpg)")
+            st.markdown("Open full image from [here](downloads/"+user+"-our_algorithm"+threshold+".jpg)")
             st.write("---")
             st.write('## Patterns for '+user+" at "+threshold)
 
