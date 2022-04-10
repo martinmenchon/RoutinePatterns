@@ -1,1 +1,42 @@
-{"Day as patterns": ["day 0: [6]", "day 1: [0, 1, 3]", "day 2: [0, 2, 7]", "day 3: [2, 6, 5]", "day 4: [4, 0, 2, 1, 3, 6, 5]", "day 5: []", "day 6: [2, 6, 5]", "day 7: [4, 3, 6]", "day 8: [0, 2, 1, 6]", "day 9: [4, 0, 2, 7, 3, 5]", "day 10: [4, 0, 2]", "day 11: [4]", "day 12: [0, 2, 1, 3, 5]"], "Found n-grams": ["A) n-gram: [6] (Found 6 Times)", "B) n-gram: [0] (Found 7 Times)", "C) n-gram: [1] (Found 4 Times)", "D) n-gram: [3] (Found 5 Times)", "E) n-gram: [2] (Found 8 Times)", "F) n-gram: [7] (Found 2 Times)", "G) n-gram: [5] (Found 5 Times)", "H) n-gram: [4] (Found 5 Times)", "I) n-gram: [1, 3] (Found 3 Times)", "J) n-gram: [0, 2] (Found 6 Times)", "K) n-gram: [2, 7] (Found 2 Times)", "L) n-gram: [2, 6] (Found 2 Times)", "M) n-gram: [6, 5] (Found 3 Times)", "N) n-gram: [4, 0] (Found 3 Times)", "O) n-gram: [2, 1] (Found 3 Times)", "P) n-gram: [3, 6] (Found 2 Times)", "Q) n-gram: [3, 5] (Found 2 Times)", "R) n-gram: [0, 2, 7] (Found 2 Times)", "S) n-gram: [2, 6, 5] (Found 2 Times)", "T) n-gram: [4, 0, 2] (Found 3 Times)", "U) n-gram: [0, 2, 1] (Found 3 Times)", "V) n-gram: [2, 1, 3] (Found 2 Times)", "W) n-gram: [0, 2, 1, 3] (Found 2 Times)"]}
+{
+    "Day as patterns": [
+        "day 1: [6]",
+        "day 2: [0, 1, 3]",
+        "day 3: [0, 2, 7]",
+        "day 4: [2, 6, 5]",
+        "day 5: [4, 0, 2, 1, 3, 6, 5]",
+        "day 6: []",
+        "day 7: [2, 6, 5]",
+        "day 8: [4, 3, 6]",
+        "day 9: [0, 2, 1, 6]",
+        "day 10: [4, 0, 2, 7, 3, 5]",
+        "day 11: [4, 0, 2]",
+        "day 12: [4]",
+        "day 13: [0, 2, 1, 3, 5]"
+    ],
+    "Found n-grams": [
+        "A) n-gram: [6] (Found 6 Times)",
+        "B) n-gram: [0] (Found 7 Times)",
+        "C) n-gram: [1] (Found 4 Times)",
+        "D) n-gram: [3] (Found 5 Times)",
+        "E) n-gram: [2] (Found 8 Times)",
+        "F) n-gram: [7] (Found 2 Times)",
+        "G) n-gram: [5] (Found 5 Times)",
+        "H) n-gram: [4] (Found 5 Times)",
+        "I) n-gram: [1, 3] (Found 3 Times)",
+        "J) n-gram: [0, 2] (Found 6 Times)",
+        "K) n-gram: [2, 7] (Found 2 Times)",
+        "L) n-gram: [2, 6] (Found 2 Times)",
+        "M) n-gram: [6, 5] (Found 3 Times)",
+        "N) n-gram: [4, 0] (Found 3 Times)",
+        "O) n-gram: [2, 1] (Found 3 Times)",
+        "P) n-gram: [3, 6] (Found 2 Times)",
+        "Q) n-gram: [3, 5] (Found 2 Times)",
+        "R) n-gram: [0, 2, 7] (Found 2 Times)",
+        "S) n-gram: [2, 6, 5] (Found 2 Times)",
+        "T) n-gram: [4, 0, 2] (Found 3 Times)",
+        "U) n-gram: [0, 2, 1] (Found 3 Times)",
+        "V) n-gram: [2, 1, 3] (Found 2 Times)",
+        "W) n-gram: [0, 2, 1, 3] (Found 2 Times)"
+    ]
+}

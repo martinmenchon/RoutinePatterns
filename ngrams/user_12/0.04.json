@@ -1,1 +1,45 @@
-{"Day as patterns": ["day 0: [0, 3]", "day 1: []", "day 2: [1]", "day 3: [0, 3]", "day 4: [0, 1, 3]", "day 5: []", "day 6: [2]", "day 7: [0, 1]", "day 8: []", "day 9: []", "day 10: [3]", "day 11: [2, 3]", "day 12: [1]", "day 13: [1, 3]", "day 14: []", "day 15: []", "day 16: []", "day 17: [3]", "day 18: [1]", "day 19: [2]", "day 20: [2]", "day 21: [1, 3]", "day 22: [0]", "day 23: []", "day 24: [0]", "day 25: []", "day 26: [2]", "day 27: [2]", "day 28: [2]", "day 29: [0]", "day 30: [2]", "day 31: []"], "Found n-grams": ["A) n-gram: [0] (Found 7 Times)", "B) n-gram: [3] (Found 8 Times)", "C) n-gram: [1] (Found 7 Times)", "D) n-gram: [2] (Found 8 Times)", "E) n-gram: [0, 3] (Found 2 Times)", "F) n-gram: [0, 1] (Found 2 Times)", "G) n-gram: [1, 3] (Found 3 Times)"]}
+{
+    "Day as patterns": [
+        "day 1: [0, 3]",
+        "day 2: []",
+        "day 3: [1]",
+        "day 4: [0, 3]",
+        "day 5: [0, 1, 3]",
+        "day 6: []",
+        "day 7: [2]",
+        "day 8: [0, 1]",
+        "day 9: []",
+        "day 10: []",
+        "day 11: [3]",
+        "day 12: [2, 3]",
+        "day 13: [1]",
+        "day 14: [1, 3]",
+        "day 15: []",
+        "day 16: []",
+        "day 17: []",
+        "day 18: [3]",
+        "day 19: [1]",
+        "day 20: [2]",
+        "day 21: [2]",
+        "day 22: [1, 3]",
+        "day 23: [0]",
+        "day 24: []",
+        "day 25: [0]",
+        "day 26: []",
+        "day 27: [2]",
+        "day 28: [2]",
+        "day 29: [2]",
+        "day 30: [0]",
+        "day 31: [2]",
+        "day 32: []"
+    ],
+    "Found n-grams": [
+        "A) n-gram: [0] (Found 7 Times)",
+        "B) n-gram: [3] (Found 8 Times)",
+        "C) n-gram: [1] (Found 7 Times)",
+        "D) n-gram: [2] (Found 8 Times)",
+        "E) n-gram: [0, 3] (Found 2 Times)",
+        "F) n-gram: [0, 1] (Found 2 Times)",
+        "G) n-gram: [1, 3] (Found 3 Times)"
+    ]
+}

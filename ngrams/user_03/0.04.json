@@ -1,1 +1,24 @@
-{"Day as patterns": ["day 0: [1, 0]", "day 1: [0]", "day 2: [1]", "day 3: []", "day 4: [1]", "day 5: [1]", "day 6: [1]", "day 7: [0]", "day 8: []", "day 9: [0]", "day 10: [0]", "day 11: []", "day 12: []", "day 13: [1]", "day 14: []", "day 15: [0]"], "Found n-grams": ["A) n-gram: [1] (Found 6 Times)", "B) n-gram: [0] (Found 6 Times)"]}
+{
+    "Day as patterns": [
+        "day 1: [1, 0]",
+        "day 2: [0]",
+        "day 3: [1]",
+        "day 4: []",
+        "day 5: [1]",
+        "day 6: [1]",
+        "day 7: [1]",
+        "day 8: [0]",
+        "day 9: []",
+        "day 10: [0]",
+        "day 11: [0]",
+        "day 12: []",
+        "day 13: []",
+        "day 14: [1]",
+        "day 15: []",
+        "day 16: [0]"
+    ],
+    "Found n-grams": [
+        "A) n-gram: [1] (Found 6 Times)",
+        "B) n-gram: [0] (Found 6 Times)"
+    ]
+}
