@@ -8,9 +8,6 @@ import pathlib
 
 STREAMLIT_SERVER_ENABLE_STATIC_SERVING=True
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "app/static")
-# if not DOWNLOADS_PATH.is_dir():
-#     DOWNLOADS_PATH.mkdir()
 
 
 # Paths
@@ -58,7 +55,6 @@ with body:
     'You selected: ', user
 
     image = Image.open(original_path+user+'.jpg')
-    #image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
     st.markdown(f"Open full image from [here](app/{original_path+user}.jpg)")
     st.write("---")
