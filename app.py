@@ -7,9 +7,6 @@ import json
 import pathlib
 
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-# DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
-# if not DOWNLOADS_PATH.is_dir():
-#     DOWNLOADS_PATH.mkdir()
 
 
 # Paths
@@ -59,7 +56,7 @@ with body:
     image = Image.open(original_path+user+'.jpg')
     # image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
-    st.markdown("Open full image from [here](downloads/"+user+".jpg)")
+    st.markdown(f"Open full image from [here]({original_path+user}'.jpg')")
     st.write("---")
 
     options = ["Our algorithm","Organizing egocentric videos of daily living activities","DBSCAN"]
@@ -72,7 +69,7 @@ with body:
             im = Image.open(our_algorithm_path+user+'/'+threshold+'.jpg')
             # im.save(str(DOWNLOADS_PATH)+"/"+user+"-our_algorithm"+threshold+".jpg")
             st.image(im)
-            st.markdown("Open full image from [here](downloads/"+user+"-our_algorithm"+threshold+".jpg)")
+            st.markdown(f"Open full image from [here]({our_algorithm_path+user}'/{threshold}.jpg')")
             st.write("---")
             st.write('## Patterns for '+user+" at "+threshold)
 
