@@ -58,7 +58,7 @@ with body:
     'You selected: ', user
 
     image = Image.open(original_path+user+'.jpg')
-    image.save(str('static/'+user+'.jpg'))
+    image.save(str(STREAMLIT_STATIC_PATH)+"/"+user+'.jpg')
     st.image(image)
     st.markdown("Open full image from [here](static/"+user+".jpg)")
     st.write("---")
