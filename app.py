@@ -8,7 +8,7 @@ import pathlib
 
 STREAMLIT_SERVER_ENABLE_STATIC_SERVING=True
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
+DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "app/static")
 # if not DOWNLOADS_PATH.is_dir():
 #     DOWNLOADS_PATH.mkdir()
 
@@ -60,7 +60,7 @@ with body:
     image = Image.open(original_path+user+'.jpg')
     image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
-    st.markdown("Open full image from [here](downloads/"+user+".jpg)")
+    st.markdown("Open full image from [here](app/static/"+user+".jpg)")
     st.write("---")
 
     options = ["Our algorithm","Organizing egocentric videos of daily living activities","DBSCAN"]
