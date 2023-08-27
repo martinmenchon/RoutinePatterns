@@ -56,7 +56,7 @@ with body:
     image = Image.open(original_path+user+'.jpg')
     # image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
-    st.markdown(f"Open full image from [here]({original_path+user}'.jpg')")
+    st.markdown(f"Open full image from [here]({original_path+user}.jpg)")
     st.write("---")
 
     options = ["Our algorithm","Organizing egocentric videos of daily living activities","DBSCAN"]
