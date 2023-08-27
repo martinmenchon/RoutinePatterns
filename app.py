@@ -58,7 +58,7 @@ with body:
     'You selected: ', user
 
     image = Image.open(original_path+user+'.jpg')
-    image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
+    #image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
     st.markdown(f"Open full image from [here]({original_path+user}.jpg)")
     st.write("---")
