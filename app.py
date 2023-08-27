@@ -7,9 +7,9 @@ import json
 import pathlib
 
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
-if not DOWNLOADS_PATH.is_dir():
-    DOWNLOADS_PATH.mkdir()
+# DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
+# if not DOWNLOADS_PATH.is_dir():
+#     DOWNLOADS_PATH.mkdir()
 
 
 # Paths
@@ -57,7 +57,7 @@ with body:
     'You selected: ', user
 
     image = Image.open(original_path+user+'.jpg')
-    image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
+    # image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
     st.markdown("Open full image from [here](downloads/"+user+".jpg)")
     st.write("---")
@@ -70,7 +70,7 @@ with body:
         threshold = st.selectbox('Select a threshold',thresholds)
         try:
             im = Image.open(our_algorithm_path+user+'/'+threshold+'.jpg')
-            im.save(str(DOWNLOADS_PATH)+"/"+user+"-our_algorithm"+threshold+".jpg")
+            # im.save(str(DOWNLOADS_PATH)+"/"+user+"-our_algorithm"+threshold+".jpg")
             st.image(im)
             st.markdown("Open full image from [here](downloads/"+user+"-our_algorithm"+threshold+".jpg)")
             st.write("---")
@@ -122,11 +122,11 @@ with body:
 
     elif option == 'Organizing egocentric videos of daily living activities':
         im = Image.open(farinella_path+user+'.jpg')
-        im.save(str(DOWNLOADS_PATH)+"/"+user+'_farinella.jpg')
+        # im.save(str(DOWNLOADS_PATH)+"/"+user+'_farinella.jpg')
         st.image(im)
         st.markdown("Open full image from [here](downloads/"+user+"_farinella.jpg)")
     elif option == 'DBSCAN':
         im = Image.open(dbscan_path+user+'.jpg')
-        im.save(str(DOWNLOADS_PATH)+"/"+user+'_dbscan.jpg')
+        # im.save(str(DOWNLOADS_PATH)+"/"+user+'_dbscan.jpg')
         st.image(im)
         st.markdown("Open full image from [here](downloads/"+user+"_dbscan.jpg)")
