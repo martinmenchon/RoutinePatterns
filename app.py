@@ -14,12 +14,12 @@ DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "app/static")
 
 
 # Paths
-original_path = "graphics_results/original/"
-farinella_path = "graphics_results/Farinella/"
-our_algorithm_path = "graphics_results/our_algorithm/"
+original_path = "static/original/"
+farinella_path = "static/Farinella/"
+our_algorithm_path = "static/our_algorithm/"
 patterns_path = "patterns/our_algorithm/"
 ngrams_path = "ngrams/"
-dbscan_path = "graphics_results/Dbscan/"
+dbscan_path = "static/Dbscan/"
 wordclouds_path = "word_cloud/"
 
 st.set_page_config(
@@ -60,7 +60,7 @@ with body:
     image = Image.open(original_path+user+'.jpg')
     image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
-    st.markdown("Open full image from [here](app/static/"+user+".jpg)")
+    st.markdown(f"Open full image from [here]({original_path+user}.jpg)")
     st.write("---")
 
     options = ["Our algorithm","Organizing egocentric videos of daily living activities","DBSCAN"]
