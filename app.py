@@ -9,8 +9,8 @@ import pathlib
 STREAMLIT_SERVER_ENABLE_STATIC_SERVING=true
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
 DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
-if not DOWNLOADS_PATH.is_dir():
-    DOWNLOADS_PATH.mkdir()
+# if not DOWNLOADS_PATH.is_dir():
+#     DOWNLOADS_PATH.mkdir()
 
 
 # Paths
