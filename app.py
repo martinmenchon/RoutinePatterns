@@ -7,7 +7,7 @@ import json
 import pathlib
 
 STREAMLIT_SERVER_ENABLE_STATIC_SERVING=True
-STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
+# STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
 
 
 # Paths
