@@ -58,9 +58,9 @@ with body:
     'You selected: ', user
 
     image = Image.open(original_path+user+'.jpg')
-    #image.save(str(STREAMLIT_STATIC_PATH)+"/"+user+'.jpg')
+    image.save(str(DOWNLOADS_PATH)+"/"+user+'.jpg')
     st.image(image)
-    st.markdown("Open full image from [here](static/"+user+".jpg)")
+    st.markdown("Open full image from [here](downloads/"+user+".jpg)")
     st.write("---")
 
     options = ["Our algorithm","Organizing egocentric videos of daily living activities","DBSCAN"]
