@@ -14,12 +14,12 @@ DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
 
 
 # Paths
-original_path = "static/original/"
-farinella_path = "static/Farinella/"
-our_algorithm_path = "static/our_algorithm/"
+original_path = "graphics_results/original/"
+farinella_path = "graphics_results/Farinella/"
+our_algorithm_path = "graphics_results/our_algorithm/"
 patterns_path = "patterns/our_algorithm/"
 ngrams_path = "ngrams/"
-dbscan_path = "static/Dbscan/"
+dbscan_path = "graphics_results/Dbscan/"
 wordclouds_path = "word_cloud/"
 
 st.set_page_config(
