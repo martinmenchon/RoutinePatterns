@@ -6,6 +6,7 @@ import json
 # session_state = SessionState.get(loaded=False,day=[],upload_key = None,values_to_keep=[], trasnparency=-1)
 import pathlib
 
+STREAMLIT_SERVER_ENABLE_STATIC_SERVING=true
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
 DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
 if not DOWNLOADS_PATH.is_dir():
