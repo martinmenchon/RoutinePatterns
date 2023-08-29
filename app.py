@@ -6,18 +6,14 @@ import json
 # session_state = SessionState.get(loaded=False,day=[],upload_key = None,values_to_keep=[], trasnparency=-1)
 import pathlib
 
-STREAMLIT_SERVER_ENABLE_STATIC_SERVING=True
-# STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-
-
 # Paths
 original_path = "static/original/"
 farinella_path = "static/Farinella/"
 our_algorithm_path = "static/our_algorithm/"
-patterns_path = "patterns/our_algorithm/"
-ngrams_path = "ngrams/"
+patterns_path = "static/patterns/our_algorithm/"
+ngrams_path = "static/ngrams/"
 dbscan_path = "static/Dbscan/"
-wordclouds_path = "word_cloud/"
+wordclouds_path = "static/word_cloud/"
 
 st.set_page_config(
     page_title="Behavioural patterns discovery for lifestyle analysis from egocentric photo-streams",
@@ -36,10 +32,10 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 #Containers
-header = st.beta_container()
-body = st.beta_container()
-body1 = st.beta_container()
-body2 = st.beta_container()
+header = st.container()
+body = st.container()
+body1 = st.container()
+body2 = st.container()
 
 with header:
     st.markdown("<h1 style='text-align: center;'>Behavioural patterns discovery for lifestyle analysis from egocentric photo-streams</h1>", unsafe_allow_html=True)
@@ -67,9 +63,8 @@ with body:
         threshold = st.selectbox('Select a threshold',thresholds)
         try:
             im = Image.open(our_algorithm_path+user+'/'+threshold+'.jpg')
-            # im.save(str(DOWNLOADS_PATH)+"/"+user+"-our_algorithm"+threshold+".jpg")
             st.image(im)
-            st.markdown("Open full image from [here](downloads/"+user+"-our_algorithm"+threshold+".jpg)")
+            st.markdown("Open full image from [here](./app/"+our_algorithm_path+user+"/"+threshold+".jpg)")
             st.write("---")
             st.write('## Patterns for '+user+" at "+threshold)
 
@@ -78,13 +73,13 @@ with body:
                 with open(json_path) as json_file:
                     data = json.load(json_file)
                 for p in data:
-                    my_expander = st.beta_expander("Pattern "+str(p), expanded=False)
+                    my_expander = st.expander("Pattern "+str(p), expanded=False)
                     with my_expander:
                         st.write(data[p])
                         pattern_image_path = patterns_path+user+"/"+threshold+"/"+p+".jpg"
                         pattern_image = Image.open(pattern_image_path)
                         st.image(pattern_image)
-            
+
             st.write('## Ngrams for '+user+" at "+threshold)
             if st.button('Show found ngrams'):
                 json_path = ngrams_path+user+"/"+threshold+".json"
@@ -94,7 +89,7 @@ with body:
                 st.write('### Day as patterns:')
                 for p in patterns_days:
                     st.write(p)
-                
+
 
                 ngrams = dic_of_ngrams["Found n-grams"]
                 st.write('### Found n-grams:')
@@ -119,11 +114,9 @@ with body:
 
     elif option == 'Organizing egocentric videos of daily living activities':
         im = Image.open(farinella_path+user+'.jpg')
-        # im.save(str(DOWNLOADS_PATH)+"/"+user+'_farinella.jpg')
         st.image(im)
-        st.markdown("Open full image from [here](downloads/"+user+"_farinella.jpg)")
+        st.markdown("Open full image from [here](./app/"+farinella_path+user+".jpg)")
     elif option == 'DBSCAN':
         im = Image.open(dbscan_path+user+'.jpg')
-        # im.save(str(DOWNLOADS_PATH)+"/"+user+'_dbscan.jpg')
         st.image(im)
-        st.markdown("Open full image from [here](downloads/"+user+"_dbscan.jpg)")
+        st.markdown("Open full image from [here](./app/"+dbscan_path+user+".jpg)")
