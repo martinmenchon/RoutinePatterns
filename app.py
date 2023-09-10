@@ -41,7 +41,7 @@ with header:
     st.markdown("<h1 style='text-align: center;'>Behavioural patterns discovery for lifestyle analysis from egocentric photo-streams</h1>", unsafe_allow_html=True)
     st.write("---")
     st.markdown("* [Martín Menchón](mailto:mmenchon@exa.unicen.edu.ar) INTIA, UNCPBA, CONICET, Argentina", unsafe_allow_html=True)
-    st.markdown("* [Estefanía Talavera](mailto:e.talavera.martinez@rug.nl) University of Groningen, Groningen, The Netherlands", unsafe_allow_html=True)
+    st.markdown("* [Estefanía Talavera](mailto:e.talaveramartinez@utwente.nl) University of Twente, Enschede, The Netherlands", unsafe_allow_html=True)
     st.markdown("* [José M. Massa](mailto:jmassa@exa.unicen.edu.ar) INTIA, UNCPBA, Argentina", unsafe_allow_html=True)
     st.markdown("* [Petia I. Radeva](mailto:petia.ivanova@ub.edu) University of Barcelona, Barcelona, Spain", unsafe_allow_html=True)
     st.write("---")
